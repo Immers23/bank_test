@@ -15,7 +15,10 @@ class Bank_account
     @transaction_history.unshift(transaction)
   end
 
-
-
+  def withdraw(withdraw_amount, date)
+    @balance -= withdraw_amount
+    transaction = Transaction.new(date, nil, withdraw_amount, @balance)
+    @transaction_history.unshift(transaction)
+  end
 
 end
