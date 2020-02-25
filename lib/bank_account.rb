@@ -11,13 +11,13 @@ class Bank_account
 
   def deposit(deposit_amount, date)
     @balance += deposit_amount
-    transaction = Transaction.new(date, deposit_amount, nil, @balance)
+    transaction = Transaction.new(date, ('%.2f' % deposit_amount).to_i, nil, '%.2f' % @balance)
     @transaction_history.unshift(transaction)
   end
 
   def withdraw(withdraw_amount, date)
     @balance -= withdraw_amount
-    transaction = Transaction.new(date, nil, withdraw_amount, @balance)
+    transaction = Transaction.new(date, nil, ('%.2f' % withdraw_amount).to_i, '%.2f' % @balance)
     @transaction_history.unshift(transaction)
   end
 
