@@ -21,4 +21,9 @@ class Bank_account
     @transaction_history.unshift(transaction)
   end
 
+  def print_balance
+    puts "date || credit || debit || balance"
+      @transaction_history.each do |transaction| puts "#{transaction.date} || #{transaction.deposit_amount} || #{transaction.withdraw_amount} || #{transaction.balance}"
+    end
+  end
 end
