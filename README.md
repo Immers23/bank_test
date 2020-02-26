@@ -2,8 +2,10 @@
 
 To run the application a step by step process from your terminal
 
+Code is structured into 2 classes, the bank_account class and the transaction class that created the transaction objects to be input into the transaction_history array.
+
 1. Clone directory
-2. Open terminal
+2. run rspec --init from terminal
 3. navigate to irb
 4. :001 > require '/Path/to/file_for/bank_account.rb'
 5. :002 > bank_account = Bank_account.new
